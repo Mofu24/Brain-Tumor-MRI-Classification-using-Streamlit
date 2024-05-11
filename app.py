@@ -20,9 +20,7 @@ st.sidebar.markdown("Flores, Marc Oliver")
 st.sidebar.markdown("Gabiano, Chris Leonard")
 st.sidebar.markdown("Gomez, Joram")
 
-st.write("""
-# Brain Tumor MRI Classification
-""")
+st.markdown("<div style='border: 1px solid black; padding: 10px;'><h1>Brain Tumor MRI Classification</h1></div>", unsafe_allow_html=True)
 
 file = st.file_uploader("Choose File", type=["jpg", "png"])
 
