@@ -21,10 +21,21 @@ st.sidebar.markdown("Gabiano, Chris Leonard")
 st.sidebar.markdown("Gomez, Joram")
 
 st.write("""
+<style>
+.file-uploader {
+    border: 2px solid #ddd; /* Add a grey border */
+    padding: 10px; /* Add some padding */
+    border-radius: 5px; /* Optional: Add rounded corners */
+}
+</style>
+""", unsafe_allow_html=True)
+
+st.write("""
 # Brain Tumor MRI Classification
 """)
 
-file = st.file_uploader("Choose File", type=["jpg", "png"])
+file = st.file_uploader("Choose File", type=["jpg", "png"], key="file-uploader")
+
 
 
 # Function to import and predict
