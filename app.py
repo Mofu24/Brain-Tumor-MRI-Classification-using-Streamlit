@@ -1,15 +1,18 @@
 st.markdown("""
 <style>
-h1 {
+.container {
     border: 2px solid black;
-    padding: 10px;
+    padding: 20px;
 }
 </style>
 """, unsafe_allow_html=True)
 
 st.write("""
-# Brain Tumor MRI Classification
-""")
+<div class="container">
+    <h1>Brain Tumor MRI Classification</h1>
+    <p>Select a Brain MRI image below:</p>
+</div>
+""", unsafe_allow_html=True)
 
 file = st.file_uploader("Choose a Brain MRI image", type=["jpg", "png"])
 
