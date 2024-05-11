@@ -13,10 +13,6 @@ def load_model():
 model = load_model()
 
 # Streamlit UI design
-st.write("""
-# Brain Tumor MRI Classification
-""")
-
 st.sidebar.header('Group 3 - CPE 019-CPE32S6')
 st.sidebar.markdown("Ejercito, Marlon Jason")
 st.sidebar.markdown("Flores, Mico Joshua")
@@ -24,11 +20,10 @@ st.sidebar.markdown("Flores, Marc Oliver")
 st.sidebar.markdown("Gabiano, Chris Leonard")
 st.sidebar.markdown("Gomez, Joram")
 
-st.markdown("---")
+st.write("""
+# Brain Tumor MRI Classification
+""")
 
-# File uploader UI design
-st.markdown("## Upload an MRI Image")
-st.markdown("Please upload an MRI image (JPG or PNG) for classification.")
 file = st.file_uploader("Choose File", type=["jpg", "png"])
 
 # Function to import and predict
