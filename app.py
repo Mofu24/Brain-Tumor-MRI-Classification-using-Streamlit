@@ -33,8 +33,7 @@ st.write("""
 </div>
 """, unsafe_allow_html=True)
 
-
-
+file = st.file_uploader("Choose File", type=["jpg", "png"])
 
 # Function to import and predict
 def import_and_predict(image_data, model):
