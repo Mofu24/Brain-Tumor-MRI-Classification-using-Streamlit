@@ -1,20 +1,4 @@
 import streamlit as st
-import tempfile
-import os
-
-# Function to read HTML file
-def local_html(file_path):
-    with open(file_path, "r") as f:
-        html_code = f.read()
-    return html_code
-
-# Read the HTML file
-html_code = local_html("index.html")
-
-# Display the HTML content using markdown
-st.markdown(html_code, unsafe_allow_html=True)
-
-# Your existing Streamlit code
 import tensorflow as tf
 import PIL
 from PIL import Image, ImageOps
