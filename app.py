@@ -16,10 +16,10 @@ st.write("""
 """)
 
 st.sidebar.header('About')
-st.sidebar.text("This app uses a deep learning model to classify brain MRI images into different tumor types.")
+st.sidebar.markdown("This app uses a deep learning model to classify brain MRI images into different tumor types.")
 
 st.sidebar.header('Instructions')
-st.sidebar.text("Upload a brain MRI image in JPG or PNG format to classify the tumor type.")
+st.sidebar.markdown("Upload a brain MRI image in JPG or PNG format to classify the tumor type.")
 
 file = st.file_uploader("Choose a Brain MRI image", type=["jpg", "png"])
 
