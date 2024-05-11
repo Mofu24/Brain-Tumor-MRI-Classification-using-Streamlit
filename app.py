@@ -12,29 +12,18 @@ def load_model():
 model = load_model()
 
 # Streamlit UI design
-# Streamlit UI design with border
-st.markdown(
-    """
-    <style>
-        .sidebar .sidebar-content {
-            border-right: 1px solid #d6d6d6;
-        }
-        .st-df {
-            border-bottom: 1px solid #d6d6d6;
-            margin-bottom: 10px;
-            padding-bottom: 10px;
-        }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
-
 st.sidebar.header('Group 3 - CPE 019-CPE32S6')
 st.sidebar.markdown("Ejercito, Marlon Jason")
 st.sidebar.markdown("Flores, Mico Joshua")
 st.sidebar.markdown("Flores, Marc Oliver")
 st.sidebar.markdown("Gabiano, Chris Leonard")
 st.sidebar.markdown("Gomez, Joram")
+
+st.sidebar.header('Github Link')
+st.sidebar.markdown("https://github.com/qmjae/Brain-Tumor-MRI-Classification-using-Streamlit")
+
+st.sidebar.header('Google Drive Link')
+st.sidebar.markdown("https://drive.google.com/drive/folders/1MExGDFt6MVJunB97RloUM7sNb3rudecz?usp=sharing")
 
 st.write("""
 # Brain Tumor MRI Classification
