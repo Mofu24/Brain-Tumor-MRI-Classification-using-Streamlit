@@ -20,10 +20,11 @@ st.sidebar.markdown("Gabiano, Chris Leonard")
 st.sidebar.markdown("Gomez, Joram")
 
 st.sidebar.header('Github Link')
-st.sidebar.markdown("https://github.com/qmjae/Brain-Tumor-MRI-Classification-using-Streamlit")
+st.sidebar.markdown("[Click Here](https://github.com/qmjae/Brain-Tumor-MRI-Classification-using-Streamlit)")
 
 st.sidebar.header('Google Drive Link')
-st.sidebar.markdown("https://drive.google.com/drive/folders/1MExGDFt6MVJunB97RloUM7sNb3rudecz?usp=sharing")
+st.sidebar.markdown("[Click Here](https://drive.google.com/drive/folders/1MExGDFt6MVJunB97RloUM7sNb3rudecz?usp=sharing)")
+
 
 st.write("""
 # Brain Tumor MRI Classification
