@@ -50,7 +50,8 @@ st.markdown(
     """
     <style>
     .reportview-container {
-        background: url("https://github.com/Mofu24/Brain-Tumor-MRI-Classification-using-Streamlit/Background1.jpg")
+        background: url("https://raw.githubusercontent.com/Mofu24/Brain-Tumor-MRI-Classification-using-Streamlit/master/Background1.jpg");
+        background-size: cover;
     }
     </style>
     """,
