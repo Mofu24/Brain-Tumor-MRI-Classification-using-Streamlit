@@ -31,32 +31,6 @@ st.write("""
 # Brain Tumor MRI Classification
 """)
 
-st.markdown(
-    """
-    <style>
-    /* Hide the default file uploader button */
-    .fileinput-button label {
-        display: none;
-    }
-    /* Style the custom button */
-    .fileinput-button::before {
-        content: 'Choose a Brain MRI image';
-        display: inline-block;
-        padding: 10px 20px;
-        background-color: #f63366;
-        color: white;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-    /* Add some margin to the custom button */
-    .fileinput-button {
-        margin-bottom: 20px;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
-
 file = st.file_uploader("", type=["jpg", "png"], key="fileuploader")
 
 def import_and_predict(image_data, model):
