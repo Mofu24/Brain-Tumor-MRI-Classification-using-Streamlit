@@ -4,6 +4,7 @@ import PIL
 from PIL import Image, ImageOps
 import numpy as np
 
+# Load the pre-trained model
 @st.cache(allow_output_mutation=True)
 def load_model():
     model = tf.keras.models.load_model('fmodel.h5')
@@ -11,6 +12,7 @@ def load_model():
 
 model = load_model()
 
+# Streamlit UI design
 st.write("""
 # Brain Tumor MRI Classification
 """)
@@ -22,38 +24,30 @@ st.sidebar.markdown("Flores, Marc Oliver")
 st.sidebar.markdown("Gabiano, Chris Leonard")
 st.sidebar.markdown("Gomez, Joram")
 
-st.sidebar.header('Instructions')
-st.sidebar.markdown("Upload a brain MRI image in JPG or PNG format to classify the tumor type.")
+st.markdown("---")
 
-file = st.file_uploader("Choose a Brain MRI image", type=["jpg", "png"])
+# File uploader UI design
+st.markdown("## Upload an MRI Image")
+st.markdown("Please upload an MRI image (JPG or PNG) for classification.")
+file = st.file_uploader("Choose File", type=["jpg", "png"])
 
+# Function to import and predict
 def import_and_predict(image_data, model):
-    size = (150, 150)  # Match the input size with the Google Colab code
-    image = ImageOps.fit(image_data, size, PIL.Image.LANCZOS)  # Use PIL.Image.LANCZOS for resizing
+    size = (150, 150)  
+    image = ImageOps.fit(image_data, size, PIL.Image.LANCZOS)  
     img = np.asarray(image)
-    img = img / 255.0  # Normalize pixel values
+    img = img / 255.0  
     img_reshape = img[np.newaxis, ...]
     prediction = model.predict(img_reshape)
     return prediction
 
+# Display prediction
 if file is None:
-    st.text("Please upload an image file")
+    st.text("Please upload an image file.")
 else:
     image = Image.open(file)
     st.image(image, use_column_width=True)
     prediction = import_and_predict(image, model)
     class_names = ['Glioma', 'Meningioma', 'No Tumor', 'Pituitary']
-    string = "OUTPUT : " + class_names[np.argmax(prediction)]
-    st.success(string)
-
-st.markdown(
-    """
-    <style>
-    .reportview-container {
-        background: url("https://raw.githubusercontent.com/Mofu24/Brain-Tumor-MRI-Classification-using-Streamlit/master/Background1.jpg");
-        background-size: cover;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
+    result = "Prediction: " + class_names[np.argmax(prediction)]
+    st.success(result)
