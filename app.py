@@ -52,9 +52,7 @@ st.markdown(
 
 st.markdown("<div class='title-container'><h1>Brain Tumor MRI Classification</h1></div>", unsafe_allow_html=True)
 
-
-
-file = st.file_uploader("", type=["jpg", "png"], key="fileuploader")
+file = st.file_uploader("Choose a Brain MRI image", type=["jpg", "png"])
 
 def import_and_predict(image_data, model):
     size = (150, 150)  # Match the input size with the Google Colab code
