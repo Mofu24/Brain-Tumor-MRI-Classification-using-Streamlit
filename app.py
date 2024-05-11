@@ -20,9 +20,14 @@ st.sidebar.markdown("Flores, Marc Oliver")
 st.sidebar.markdown("Gabiano, Chris Leonard")
 st.sidebar.markdown("Gomez, Joram")
 
-st.markdown("<div style='border: 1px solid black; padding: 10px;'><h1>Brain Tumor MRI Classification</h1></div>", unsafe_allow_html=True)
+st.markdown("""
+<div style='border: 2px solid #f63366; background-color: #f9f9f9; padding: 10px;'>
+<h1>Brain Tumor MRI Classification</h1>
+</div>
+""", unsafe_allow_html=True)
 
 file = st.file_uploader("Choose File", type=["jpg", "png"])
+
 
 # Function to import and predict
 def import_and_predict(image_data, model):
