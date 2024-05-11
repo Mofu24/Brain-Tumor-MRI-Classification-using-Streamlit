@@ -1,18 +1,18 @@
 import streamlit as st
-from streamlit.components.v1 import html
 import tempfile
 import os
 
-# Function to embed HTML file
+# Function to read HTML file
 def local_html(file_path):
     with open(file_path, "r") as f:
         html_code = f.read()
     return html_code
 
-# Embed the HTML file
+# Read the HTML file
 html_code = local_html("index.html")
-html_component = html(html_code, width=800, height=600)
-st.components.v1.html(html_component)
+
+# Display the HTML content using markdown
+st.markdown(html_code, unsafe_allow_html=True)
 
 # Your existing Streamlit code
 import tensorflow as tf
