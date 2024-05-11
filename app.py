@@ -15,7 +15,7 @@ st.write("""
 # Brain Tumor MRI Classification
 """)
 
-file = st.file_uploader("Choose a Brain MRI image", type=["jpg", "png"])
+file = st.file_uploader("Choose File", type=["jpg", "png"])
 
 def import_and_predict(image_data, model):
     size = (150, 150)  # Match the input size with the Google Colab code
