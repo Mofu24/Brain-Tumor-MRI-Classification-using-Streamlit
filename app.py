@@ -27,9 +27,23 @@ st.sidebar.header('Google Drive Link')
 st.sidebar.markdown("[Click Here](https://drive.google.com/drive/folders/1MExGDFt6MVJunB97RloUM7sNb3rudecz?usp=sharing)")
 
 
-st.write("""
-# Brain Tumor MRI Classification
-""")
+st.markdown(
+    """
+    <style>
+    /* Add a border around the title */
+    .title-container {
+        border: 2px solid #f63366;
+        border-radius: 5px;
+        padding: 10px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+st.markdown("<div class='title-container'><h1>Brain Tumor MRI Classification</h1></div>", unsafe_allow_html=True)
 
 file = st.file_uploader("", type=["jpg", "png"], key="fileuploader")
 
