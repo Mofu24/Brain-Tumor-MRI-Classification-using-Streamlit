@@ -12,13 +12,14 @@ def load_model():
 model = load_model()
 
 # Streamlit UI design
+# Streamlit UI design with border
 st.markdown(
     """
     <style>
         .sidebar .sidebar-content {
             border-right: 1px solid #d6d6d6;
         }
-        .css-1l02zno {
+        .st-df {
             border-bottom: 1px solid #d6d6d6;
             margin-bottom: 10px;
             padding-bottom: 10px;
@@ -59,3 +60,4 @@ else:
     class_names = ['Glioma', 'Meningioma', 'No Tumor', 'Pituitary']
     string = "OUTPUT : " + class_names[np.argmax(prediction)]
     st.success(string)
+
