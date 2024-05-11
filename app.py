@@ -1,39 +1,17 @@
-import streamlit as st
-import tensorflow as tf
-import PIL
-from PIL import Image, ImageOps
-import numpy as np
-
-# Load the pre-trained model
-@st.cache(allow_output_mutation=True)
-def load_model():
-    model = tf.keras.models.load_model('fmodel.h5')
-    return model
-
-model = load_model()
-
-# Streamlit UI design
-st.sidebar.header('Group 3 - CPE 019-CPE32S6')
-st.sidebar.markdown("Ejercito, Marlon Jason")
-st.sidebar.markdown("Flores, Mico Joshua")
-st.sidebar.markdown("Flores, Marc Oliver")
-st.sidebar.markdown("Gabiano, Chris Leonard")
-st.sidebar.markdown("Gomez, Joram")
-
-st.write("""
-<div style='border: 2px solid #ddd; padding: 10px; border-radius: 5px;'>
-    <h1>Brain Tumor MRI Classification</h1>
-    <p>Select an MRI image of a brain tumor for classification:</p>
-    <div>
-        <form enctype="multipart/form-data">
-            <input type="file" name="file" />
-            <input type="submit" value="Upload" />
-        </form>
-    </div>
-</div>
+st.markdown("""
+<style>
+h1 {
+    border: 2px solid black;
+    padding: 10px;
+}
+</style>
 """, unsafe_allow_html=True)
 
-file = st.file_uploader("Choose File", type=["jpg", "png"])
+st.write("""
+# Brain Tumor MRI Classification
+""")
+
+file = st.file_uploader("Choose a Brain MRI image", type=["jpg", "png"])
 
 # Function to import and predict
 def import_and_predict(image_data, model):
