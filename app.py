@@ -5,6 +5,18 @@ from PIL import Image, ImageOps
 import numpy as np
 
 @st.cache(allow_output_mutation=True)
+
+st.markdown(
+    """
+    <style>
+    body {
+        background-color: #f0f2f6;  /* Set your desired background color here */
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 def load_model():
     model = tf.keras.models.load_model('fmodel.h5')
     return model
