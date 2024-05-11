@@ -16,7 +16,7 @@ st.write("""
 """)
 
 st.sidebar.header('About')
-st.sidebar.markdown("This app uses a deep learning model to classify brain MRI images into different tumor types.")
+st.sidebar.markdown("Group 3 - CPE 019-CPE32S6 - Emerging Technologies 2 in CpE <br> s")
 
 st.sidebar.header('Instructions')
 st.sidebar.markdown("Upload a brain MRI image in JPG or PNG format to classify the tumor type.")
