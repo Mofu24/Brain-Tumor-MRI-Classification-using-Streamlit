@@ -27,7 +27,7 @@ st.sidebar.markdown("[Click Here](https://drive.google.com/drive/folders/1MExGDF
 
 
 st.markdown("""
-<h1 style='text-align: center; color: #333;'>Brain Tumor MRI Classification</h1>
+<h1 style='text-align: center; color: #f5f5f5;'>Brain Tumor MRI Classification</h1>
 """, unsafe_allow_html=True)
 
 
