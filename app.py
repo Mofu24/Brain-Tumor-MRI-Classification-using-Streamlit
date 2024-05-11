@@ -15,8 +15,7 @@ st.write("""
 # Brain Tumor MRI Classification
 """)
 
-st.sidebar.header('About')
-st.sidebar.markdown("Group 3 - CPE 019-CPE32S6")
+st.sidebar.header('Group 3 - CPE 019-CPE32S6')
 st.sidebar.markdown("Ejercito, Marlon Jason")
 st.sidebar.markdown("Flores, Mico Joshua")
 st.sidebar.markdown("Flores, Marc Oliver")
