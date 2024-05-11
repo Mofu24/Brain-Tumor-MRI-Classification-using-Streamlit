@@ -11,6 +11,27 @@ def load_model():
 
 model = load_model()
 
+<html>
+<head>
+  <title>Brain Tumor MRI Classification</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Brain Tumor MRI Classification</h1>
+    <p>Please upload an image file</p>
+    <input type="file" id="fileInput" accept=".jpg,.png">
+    <div id="imageContainer" class="hidden">
+      <img id="uploadedImage" src="#" alt="Uploaded Image" />
+      <p id="resultText"></p>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+
 st.write("""
 # Brain Tumor MRI Classification
 """)
