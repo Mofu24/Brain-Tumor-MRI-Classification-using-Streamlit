@@ -12,6 +12,22 @@ def load_model():
 model = load_model()
 
 # Streamlit UI design
+st.markdown(
+    """
+    <style>
+        .sidebar .sidebar-content {
+            border-right: 1px solid #d6d6d6;
+        }
+        .css-1l02zno {
+            border-bottom: 1px solid #d6d6d6;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+        }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 st.sidebar.header('Group 3 - CPE 019-CPE32S6')
 st.sidebar.markdown("Ejercito, Marlon Jason")
 st.sidebar.markdown("Flores, Mico Joshua")
