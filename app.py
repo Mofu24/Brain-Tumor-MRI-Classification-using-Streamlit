@@ -30,25 +30,27 @@ st.markdown("""
 <h1 style='text-align: center; color: #f5f5f5;'>Brain Tumor MRI Classification</h1>
 """, unsafe_allow_html=True)
 
+# UI design for file uploader and prediction
+uploaded_file = st.file_uploader("Choose a Brain MRI image", type=["jpg", "png"])
 
-file = st.file_uploader("Choose a Brain MRI image", type=["jpg", "png"])
+if uploaded_file is not None:
+    # Display the uploaded image
+    image = Image.open(uploaded_file)
+    st.image(image, caption='Uploaded MRI Image', use_column_width=True)
 
-def import_and_predict(image_data, model):
-    size = (150, 150)  # Match the input size with the Google Colab code
-    image = ImageOps.fit(image_data, size, PIL.Image.LANCZOS)  # Use PIL.Image.LANCZOS for resizing
-    img = np.asarray(image)
-    img = img / 255.0  # Normalize pixel values
-    img_reshape = img[np.newaxis, ...]
-    prediction = model.predict(img_reshape)
-    return prediction
+    # Make a prediction
+    if st.button('Predict'):
+        # Display a loading message while the model is predicting
+        with st.spinner('Predicting...'):
+            prediction = import_and_predict(image, model)
+            class_names = ['Glioma', 'Meningioma', 'No Tumor', 'Pituitary']
+            predicted_class = class_names[np.argmax(prediction)]
+            confidence = np.max(prediction)
+        
+        # Display the prediction result
+        st.success(f'Prediction: {predicted_class} (Confidence: {confidence:.2f})')
 
-if file is None:
-    st.text("Please upload an image file")
 else:
-    image = Image.open(file)
-    st.image(image, use_column_width=True)
-    prediction = import_and_predict(image, model)
-    class_names = ['Glioma', 'Meningioma', 'No Tumor', 'Pituitary']
-    string = "OUTPUT : " + class_names[np.argmax(prediction)]
-    st.success(string)
+    st.text("Please upload an image file")
+
 
