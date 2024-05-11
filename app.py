@@ -8,7 +8,7 @@ st.markdown(
     """
     <style>
     body {
-        background-image: url('Background1.jpg'); /* Set the URL of your background image here */
+        background-image: url('https://github.com/Mofu24/Brain-Tumor-MRI-Classification-using-Streamlit.git/Background1.jpg'); /* Set the URL of your background image here */
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
