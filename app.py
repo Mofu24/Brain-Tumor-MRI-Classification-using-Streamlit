@@ -4,8 +4,6 @@ import PIL
 from PIL import Image, ImageOps
 import numpy as np
 
-@st.cache(allow_output_mutation=True)
-
 st.markdown(
     """
     <style>
@@ -16,6 +14,8 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+
+@st.cache(allow_output_mutation=True)
 
 def load_model():
     model = tf.keras.models.load_model('fmodel.h5')
