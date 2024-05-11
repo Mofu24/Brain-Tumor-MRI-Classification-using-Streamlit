@@ -45,8 +45,16 @@ if file is None:
     st.text("Please upload an image file")
 else:
     image = Image.open(file)
-    st.image(image, use_column_width=True)
+    st.image(image, use_column_width=True, output_format='JPEG')
+    
+    # Add a border to the image
+    st.markdown(
+        "<style> img { display: block; margin-left: auto; margin-right: auto; border: 2px solid #ccc; border-radius: 8px; } </style>",
+        unsafe_allow_html=True
+    )
+    
     prediction = import_and_predict(image, model)
     class_names = ['Glioma', 'Meningioma', 'No Tumor', 'Pituitary']
     string = "OUTPUT : " + class_names[np.argmax(prediction)]
     st.success(string)
+
