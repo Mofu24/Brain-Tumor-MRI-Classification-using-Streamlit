@@ -16,7 +16,12 @@ st.write("""
 """)
 
 st.sidebar.header('About')
-st.sidebar.markdown("Group 3 - CPE 019-CPE32S6 - Emerging Technologies 2 in CpE <br> s")
+st.sidebar.markdown("Group 3 - CPE 019-CPE32S6")
+st.sidebar.markdown("Ejercito, Marlon Jason")
+st.sidebar.markdown("Flores, Mico Joshua")
+st.sidebar.markdown("Flores, Marc Oliver")
+st.sidebar.markdown("Gabiano, Chris Leonard")
+st.sidebar.markdown("Gomez, Joram")
 
 st.sidebar.header('Instructions')
 st.sidebar.markdown("Upload a brain MRI image in JPG or PNG format to classify the tumor type.")
