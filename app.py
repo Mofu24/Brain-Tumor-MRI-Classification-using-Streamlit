@@ -50,7 +50,7 @@ st.markdown(
     """
     <style>
     .reportview-container {
-        background: url("https://www.shutterstock.com/image-vector/abstract-medical-background-flat-icons-symbols-1452061073")
+        background: url("https://github.com/Mofu24/Brain-Tumor-MRI-Classification-using-Streamlit/Background1.jpg")
     }
     </style>
     """,
