@@ -13,35 +13,12 @@ def load_model():
 model = load_model()
 
 # Streamlit UI design
-st.markdown(
-    """
+st.markdown("""
     <style>
-    /* Hide the sidebar handle */
-    .sidebar .sidebar-content {
-        transition: margin-left .3s;
-        position: fixed !important;
-        overflow-y: auto;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        z-index: 1;
-        padding-top: 45px;
-        width: 200px;
-        height: 100vh;
-        background-color: #f8f9fa;
-        border-right: 1px solid #eaecef;
-    }
-    .sidebar .sidebar-content .sidebar-close {
-        display: none;
-    }
-    .main .block-container {
-        margin-left: 200px;
-        transition: margin-left .3s;
-    }
+        #MainMenu {visibility: hidden;}
+        footer {visibility: hidden;}
     </style>
-    """,
-    unsafe_allow_html=True
-)
+""", unsafe_allow_html=True)
 
 st.sidebar.header('Group 3 - CPE 019-CPE32S6')
 st.sidebar.markdown("Ejercito, Marlon Jason")
