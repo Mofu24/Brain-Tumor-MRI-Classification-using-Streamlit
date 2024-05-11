@@ -8,7 +8,10 @@ st.markdown(
     """
     <style>
     body {
-        background-color: #f0f2f6;  /* Set your desired background color here */
+        background-image: url('https://example.com/your-background-image.jpg'); /* Set the URL of your background image here */
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
     }
     </style>
     """,
