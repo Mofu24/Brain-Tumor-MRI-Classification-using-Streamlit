@@ -37,7 +37,6 @@ st.markdown(
         padding: 10px;
         margin-bottom: 20px;
         text-align: center;
-        box-shadow: 0 0 0 2px white, 0 0 0 4px #f63366;
     }
     </style>
     """,
@@ -45,6 +44,7 @@ st.markdown(
 )
 
 st.markdown("<div class='title-container'><h1>Brain Tumor MRI Classification</h1></div>", unsafe_allow_html=True)
+
 
 
 file = st.file_uploader("", type=["jpg", "png"], key="fileuploader")
