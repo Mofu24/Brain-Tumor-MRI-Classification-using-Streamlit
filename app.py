@@ -72,7 +72,11 @@ elif page == "Guide":
 
     st.write("- No Tumor")
     no_tumor_image = load_image("https://drive.google.com/uc?export=view&id=1JqI8bUEW6P3PyYfGsudr_0oMxekgYLDy")
-    st.image(no_tumor_image, caption="<span style='font-size:16px; color:lightgrey'>No Tumor</span>", use_column_width=True, output_format="auto")
+    st.image(no_tumor_image, caption="No Tumor", use_column_width=True)
+
+    # Adding custom caption styling
+    caption_style = "font-size: 16px; color: lightgrey;"
+    st.markdown(f"<p style='{caption_style}'>No Tumor</p>")
 
 
     st.write("- Pituitary")
