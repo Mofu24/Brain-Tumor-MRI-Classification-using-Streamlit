@@ -9,17 +9,7 @@ import numpy as np
 def load_model():
     model = tf.keras.models.load_model('fmodel.h5')
     return model
-
-# Define function to get the shareable link
-def get_gdrive_image_link(file_id):
-    return f"https://drive.google.com/uc?id={file_id}"
-
-# Image file IDs from Google Drive
-glioma_id = "1_dHlhzdvtZxzPKiby1w9N__R9uPrAXUP"
-meningioma_id = "1gCTR9Oe4zuE3SDojoqYPMPwOupfSA9Lf"
-no_tumor_id = "1JqI8bUEW6P3PyYfGsudr_0oMxekgYLDy"
-pituitary_id = "1gLzYhPu_P-ZZybapSBEE_mzTymFCd7FP"
-
+    
 model = load_model()
 
 # Navigation Bar
@@ -72,16 +62,14 @@ elif page == "Guide":
     st.title("Names")
     st.markdown("---")
     st.write("This page displays the names of the classes that the model can classify:")
-    st.image(get_gdrive_image_link(glioma_id), caption="Glioma", use_column_width=True)
+    st.write("This page displays the names of the classes that the model can classify:")
+    st.image("https://drive.google.com/uc?export=view&id=1_dHlhzdvtZxzPKiby1w9N__R9uPrAXUP", caption="Glioma", use_column_width=True)
     st.write("- Glioma")
-
-    st.image(get_gdrive_image_link(meningioma_id), caption="Meningioma", use_column_width=True)
+    st.image("https://drive.google.com/uc?export=view&id=1gCTR9Oe4zuE3SDojoqYPMPwOupfSA9Lf", caption="Meningioma", use_column_width=True)
     st.write("- Meningioma")
-
-    st.image(get_gdrive_image_link(no_tumor_id), caption="No Tumor", use_column_width=True)
+    st.image("https://drive.google.com/uc?export=view&id=1JqI8bUEW6P3PyYfGsudr_0oMxekgYLDy", caption="No Tumor", use_column_width=True)
     st.write("- No Tumor")
-
-    st.image(get_gdrive_image_link(pituitary_id), caption="Pituitary", use_column_width=True)
+    st.image("https://drive.google.com/uc?export=view&id=1gLzYhPu_P-ZZybapSBEE_mzTymFCd7FP", caption="Pituitary", use_column_width=True)
     st.write("- Pituitary")
 
 # About Page
