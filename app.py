@@ -9,6 +9,10 @@ import numpy as np
 def load_model():
     model = tf.keras.models.load_model('fmodel.h5')
     return model
+
+@st.cache
+def load_image(image_url):
+    return plt.imread(image_url)
     
 model = load_model()
 
@@ -53,10 +57,6 @@ elif page == "Guide":
     st.title("Guide")
     st.markdown("---")
     st.write("This page displays the names of the classes that the model can classify:")
-    
-    @st.cache
-    def load_image(image_url):
-        return plt.imread(image_url)
 
     st.write("- Glioma")
     glioma_image = load_image("https://drive.google.com/uc?export=view&id=1_dHlhzdvtZxzPKiby1w9N__R9uPrAXUP")
