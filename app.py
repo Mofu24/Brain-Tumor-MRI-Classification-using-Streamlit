@@ -74,7 +74,7 @@ elif page == "About":
     st.write("This is a simple web application that classifies Brain MRI images into four categories: Glioma, Meningioma, No Tumor, and Pituitary Tumor.")
     st.write("It uses a deep learning model trained on MRI images to make predictions.")
     st.markdown("---")
-    st.write.header("Group 3 - CPE 019-CPE32S6")
+    st.markdown.header("Group 3 - CPE 019-CPE32S6")
     st.write("Ejercito, Marlon Jason")
     st.write("Flores, Mico Joshua")
     st.write("Flores, Marc Oliver")
