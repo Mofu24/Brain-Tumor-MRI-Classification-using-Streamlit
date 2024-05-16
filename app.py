@@ -62,9 +62,14 @@ elif page == "Guide":
     st.title("Names")
     st.markdown("---")
     st.write("This page displays the names of the classes that the model can classify:")
+    st.write("This page displays the names of the classes that the model can classify:")
+    st.image("https://drive.google.com/uc?export=view&id=1_dHlhzdvtZxzPKiby1w9N__R9uPrAXUP", caption="Glioma", use_column_width=True)
     st.write("- Glioma")
+    st.image("path_to_meningioma_image.jpg", caption="Meningioma", use_column_width=True)
     st.write("- Meningioma")
+    st.image("path_to_no_tumor_image.jpg", caption="No Tumor", use_column_width=True)
     st.write("- No Tumor")
+    st.image("path_to_pituitary_image.jpg", caption="Pituitary", use_column_width=True)
     st.write("- Pituitary")
 
 # About Page
