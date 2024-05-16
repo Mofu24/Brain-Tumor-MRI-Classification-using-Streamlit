@@ -5,7 +5,6 @@ from PIL import Image, ImageOps
 import numpy as np
 
 @st.cache(allow_output_mutation=True)
-
 def load_model():
     model = tf.keras.models.load_model('fmodel.h5')
     return model
@@ -54,11 +53,12 @@ st.markdown(
 
 st.markdown("<div class='title-container'><h1>Brain Tumor MRI Classification</h1></div>", unsafe_allow_html=True)
 
-file = st.file_uploader("Choose a Brain MRI image", type=["jpg", "png"])
+file = st.file_uploader("Choose a Brain MRI image", type=["jpg", "png", "jpeg"])
 
 def import_and_predict(image_data, model):
     size = (150, 150)  # Match the input size with the Google Colab code
     image = ImageOps.fit(image_data, size, PIL.Image.LANCZOS)  # Use PIL.Image.LANCZOS for resizing
+    image = image.convert('RGB')  # Ensure image has 3 color channels (RGB)
     img = np.asarray(image)
     img = img / 255.0  # Normalize pixel values
     img_reshape = img[np.newaxis, ...]
@@ -68,17 +68,27 @@ def import_and_predict(image_data, model):
 if file is None:
     st.text("Please upload an image file")
 else:
-    image = Image.open(file)
-    st.image(image, use_column_width=True, output_format='JPEG')
-    
-    # Add a border to the image
-    st.markdown(
-        "<style> img { display: block; margin-left: auto; margin-right: auto; border: 2px solid #ccc; border-radius: 8px; } </style>",
-        unsafe_allow_html=True
-    )
-    
-    prediction = import_and_predict(image, model)
-    class_names = ['Glioma', 'Meningioma', 'No Tumor', 'Pituitary']
-    string = "OUTPUT : " + class_names[np.argmax(prediction)]
-    st.success(string)
-
+    try:
+        image = Image.open(file)
+        st.image(image, use_column_width=True, output_format='JPEG')
+        
+        # Add a border to the image
+        st.markdown(
+            "<style> img { display: block; margin-left: auto; margin-right: auto; border: 2px solid #ccc; border-radius: 8px; } </style>",
+            unsafe_allow_html=True
+        )
+        
+        prediction = import_and_predict(image, model)
+        class_names = ['Glioma', 'Meningioma', 'No Tumor', 'Pituitary']
+        
+        # Display confidence levels
+        confidence_levels = {class_name: round(float(pred), 4) for class_name, pred in zip(class_names, prediction[0])}
+        st.write("Confidence levels:")
+        for class_name, confidence in confidence_levels.items():
+            st.write(f"{class_name}: {confidence * 100:.2f}%")
+        
+        # Display the most likely class
+        string = "OUTPUT : " + class_names[np.argmax(prediction)]
+        st.success(string)
+    except Exception as e:
+        st.error("Error: Please upload an image file with one of the following formats: .JPG, .PNG, or .JPEG")
