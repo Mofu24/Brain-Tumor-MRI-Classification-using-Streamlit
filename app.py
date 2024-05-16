@@ -3,6 +3,8 @@ import tensorflow as tf
 import PIL
 from PIL import Image, ImageOps
 import numpy as np
+import requests
+from io import BytesIO
 
 # Function to load the model
 @st.cache(allow_output_mutation=True)
