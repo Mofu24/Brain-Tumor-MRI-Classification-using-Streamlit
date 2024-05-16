@@ -60,7 +60,6 @@ elif page == "Guide":
     st.write("- Glioma")
     image = load_image('https://drive.google.com/uc?export=view&id=1_dHlhzdvtZxzPKiby1w9N__R9uPrAXUP')
     st.image(image, caption='Glioma', use_column_width=True)
-    st.image("https://drive.google.com/uc?export=view&id=1_dHlhzdvtZxzPKiby1w9N__R9uPrAXUP", caption="Glioma", use_column_width=True)
     
     st.write("- Meningioma")
     st.image("https://drive.google.com/uc?export=view&id=1gCTR9Oe4zuE3SDojoqYPMPwOupfSA9Lf", caption="Meningioma", use_column_width=True)
