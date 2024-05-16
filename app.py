@@ -64,10 +64,3 @@ elif page == "About":
     st.markdown("---")
     st.write("This is a simple web application that classifies Brain MRI images into four categories: Glioma, Meningioma, No Tumor, and Pituitary Tumor.")
     st.write("It uses a deep learning model trained on MRI images to make predictions.")
-
-        
-        # Display the most likely class
-        string = "OUTPUT : " + class_names[np.argmax(prediction)]
-        st.success(string)
-    except Exception as e:
-        st.error("Error: Please upload an image file with one of the following formats: .JPG, .PNG, or .JPEG")
