@@ -14,7 +14,7 @@ model = load_model()
 
 # Navigation Bar
 st.sidebar.title("Navigation")
-page = st.sidebar.radio("Go to", ["Home", "Guide", "About"])
+page = st.sidebar.radio("Go to", ["Home", "Guide", "About", "Link"])
 
 st.sidebar.header('Github Link')
 st.sidebar.markdown("[Click Here](https://github.com/qmjae/Brain-Tumor-MRI-Classification-using-Streamlit)")
@@ -59,7 +59,7 @@ if page == "Home":
 
 # Names Page
 elif page == "Guide":
-    st.title("Names")
+    st.title("Guide")
     st.markdown("---")
     st.write("This page displays the names of the classes that the model can classify:")
     
@@ -91,3 +91,12 @@ elif page == "About":
     st.write("Gomez, Joram")
     st.markdown("---")
 
+elif page == "Link":
+    st.title("Link")
+    st.markdown("---")
+    st.header("Github Link")
+    st.write("[Click Here](https://github.com/qmjae/Brain-Tumor-MRI-Classification-using-Streamlit)")
+    st.header("Google Drive Link")
+    st.write("[Click Here](https://drive.google.com/drive/folders/1MExGDFt6MVJunB97RloUM7sNb3rudecz?usp=sharing)")
+    st.header("Google Colaboratory Link")
+    st.write("[Click Here](https://colab.research.google.com/drive/1voRF5tQ49C45BU7mJRV8wBKjji_YANz5?usp=sharing)")
