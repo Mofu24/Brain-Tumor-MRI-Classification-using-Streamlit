@@ -9,6 +9,9 @@ import numpy as np
 def load_model():
     model = tf.keras.models.load_model('fmodel.h5')
     return model
+
+def load_image(url):
+    return PIL.Image.open(requests.get(url, stream=True).raw)
     
 model = load_model()
 
@@ -55,6 +58,8 @@ elif page == "Guide":
     st.write("This page displays the names of the classes that the model can classify:")
     
     st.write("- Glioma")
+    image = load_image('https://drive.google.com/uc?export=view&id=1_dHlhzdvtZxzPKiby1w9N__R9uPrAXUP')
+    st.image(image, caption='Glioma', use_column_width=True)
     st.image("https://drive.google.com/uc?export=view&id=1_dHlhzdvtZxzPKiby1w9N__R9uPrAXUP", caption="Glioma", use_column_width=True)
     
     st.write("- Meningioma")
