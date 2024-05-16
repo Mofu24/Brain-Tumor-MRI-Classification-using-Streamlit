@@ -26,7 +26,23 @@ page = st.sidebar.radio("Go to", ["Home", "Guide", "About", "Links"])
 
 # Home Page
 if page == "Home":
-    st.title("Brain Tumor MRI Classification")
+    st.markdown(
+    """
+    <style>
+    /* Add a border around the title */
+    .title-container {
+        border: 2px solid #f63366;
+        border-radius: 5px;
+        padding: 10px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+    st.markdown("<div class='title-container'><h1>Brain Tumor MRI Classification</h1></div>", unsafe_allow_html=True)
     st.markdown("---")
 
     # File Uploader
