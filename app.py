@@ -16,15 +16,6 @@ model = load_model()
 st.sidebar.title("Navigation")
 page = st.sidebar.radio("Go to", ["Home", "Guide", "About", "Link"])
 
-st.sidebar.header('Github Link')
-st.sidebar.markdown("[Click Here](https://github.com/qmjae/Brain-Tumor-MRI-Classification-using-Streamlit)")
-
-st.sidebar.header('Google Drive Link')
-st.sidebar.markdown("[Click Here](https://drive.google.com/drive/folders/1MExGDFt6MVJunB97RloUM7sNb3rudecz?usp=sharing)")
-
-st.sidebar.header('Google Colaboratory Link')
-st.sidebar.markdown("[Click Here](https://colab.research.google.com/drive/1voRF5tQ49C45BU7mJRV8wBKjji_YANz5?usp=sharing)")
-
 # Home Page
 if page == "Home":
     st.title("Brain Tumor MRI Classification")
