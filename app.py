@@ -71,6 +71,7 @@ if page == "Home":
             st.success(f"Prediction: {result}")
         else:
             st.error(f"Prediction: {result}")
+    st.markdown("---")
 
 # Names Page
 elif page == "Guide":
