@@ -14,7 +14,7 @@ model = load_model()
 
 # Navigation Bar
 st.sidebar.title("Navigation")
-page = st.sidebar.radio("Go to", ["Home", "Guide", "About", "Link"])
+page = st.sidebar.radio("Go to", ["Home", "Guide", "About", "Links"])
 
 # Home Page
 if page == "Home":
@@ -82,8 +82,8 @@ elif page == "About":
     st.write("Gomez, Joram")
     st.markdown("---")
 
-elif page == "Link":
-    st.title("Link")
+elif page == "Links":
+    st.title("Links")
     st.markdown("---")
     st.header("Github Link")
     st.write("[Click Here](https://github.com/qmjae/Brain-Tumor-MRI-Classification-using-Streamlit)")
