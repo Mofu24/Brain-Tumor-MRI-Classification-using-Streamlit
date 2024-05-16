@@ -54,17 +54,25 @@ elif page == "Guide":
     st.markdown("---")
     st.write("This page displays the names of the classes that the model can classify:")
     
+    @st.cache
+    def load_image(image_url):
+        return plt.imread(image_url)
+
     st.write("- Glioma")
-    st.image("https://drive.google.com/uc?export=view&id=1_dHlhzdvtZxzPKiby1w9N__R9uPrAXUP", caption="Glioma", use_column_width=True)
-    
+    glioma_image = load_image("https://drive.google.com/uc?export=view&id=1_dHlhzdvtZxzPKiby1w9N__R9uPrAXUP")
+    st.image(glioma_image, caption="Glioma", use_column_width=True)
+
     st.write("- Meningioma")
-    st.image("https://drive.google.com/uc?export=view&id=1gCTR9Oe4zuE3SDojoqYPMPwOupfSA9Lf", caption="Meningioma", use_column_width=True)
-    
+    meningioma_image = load_image("https://drive.google.com/uc?export=view&id=1gCTR9Oe4zuE3SDojoqYPMPwOupfSA9Lf")
+    st.image(meningioma_image, caption="Meningioma", use_column_width=True)
+
     st.write("- No Tumor")
-    st.image("https://drive.google.com/uc?export=view&id=1JqI8bUEW6P3PyYfGsudr_0oMxekgYLDy", caption="No Tumor", use_column_width=True)
-    
+    no_tumor_image = load_image("https://drive.google.com/uc?export=view&id=1JqI8bUEW6P3PyYfGsudr_0oMxekgYLDy")
+    st.image(no_tumor_image, caption="No Tumor", use_column_width=True)
+
     st.write("- Pituitary")
-    st.image("https://drive.google.com/uc?export=view&id=1klmMcv2ioiIy09M-AG4sXcKCOHNyBiMJ", caption="Pituitary", use_column_width=True)
+    pituitary_image = load_image("https://drive.google.com/uc?export=view&id=1klmMcv2ioiIy09M-AG4sXcKCOHNyBiMJ")
+    st.image(pituitary_image, caption="Pituitary", use_column_width=True)
     
 # About Page
 elif page == "About":
