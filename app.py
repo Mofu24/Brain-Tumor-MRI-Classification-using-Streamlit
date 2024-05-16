@@ -75,9 +75,11 @@ elif page == "About":
     st.write("It uses a deep learning model trained on MRI images to make predictions.")
     st.markdown("---")
     st.header("Group 3 - CPE 019-CPE32S6")
+    st.markdown("---")
     st.write("Ejercito, Marlon Jason")
     st.write("Flores, Mico Joshua")
     st.write("Flores, Marc Oliver")
     st.write("Gabiano, Chris Leonard")
     st.write("Gomez, Joram")
+    st.markdown("---")
 
