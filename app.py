@@ -62,15 +62,19 @@ elif page == "Guide":
     st.title("Names")
     st.markdown("---")
     st.write("This page displays the names of the classes that the model can classify:")
-    st.image("https://drive.google.com/uc?export=view&id=1_dHlhzdvtZxzPKiby1w9N__R9uPrAXUP", caption="Glioma", use_column_width=True)
+    
     st.write("- Glioma")
-    st.image("https://drive.google.com/uc?export=view&id=1gCTR9Oe4zuE3SDojoqYPMPwOupfSA9Lf", caption="Meningioma", use_column_width=True)
+    st.image("https://drive.google.com/uc?export=view&id=1_dHlhzdvtZxzPKiby1w9N__R9uPrAXUP", caption="Glioma", use_column_width=True)
+    
     st.write("- Meningioma")
-    st.image("https://drive.google.com/uc?export=view&id=1JqI8bUEW6P3PyYfGsudr_0oMxekgYLDy", caption="No Tumor", use_column_width=True)
+    st.image("https://drive.google.com/uc?export=view&id=1gCTR9Oe4zuE3SDojoqYPMPwOupfSA9Lf", caption="Meningioma", use_column_width=True)
+    
     st.write("- No Tumor")
-    st.image("https://drive.google.com/uc?export=view&id=1klmMcv2ioiIy09M-AG4sXcKCOHNyBiMJ", caption="Pituitary", use_column_width=True)
+    st.image("https://drive.google.com/uc?export=view&id=1JqI8bUEW6P3PyYfGsudr_0oMxekgYLDy", caption="No Tumor", use_column_width=True)
+    
     st.write("- Pituitary")
-
+    st.image("https://drive.google.com/uc?export=view&id=1klmMcv2ioiIy09M-AG4sXcKCOHNyBiMJ", caption="Pituitary", use_column_width=True)
+    
 # About Page
 elif page == "About":
     st.title("About")
