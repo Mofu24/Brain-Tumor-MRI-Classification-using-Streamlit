@@ -12,7 +12,9 @@ def load_model():
 
 @st.cache
 def load_image(image_url):
-    return plt.imread(image_url)
+    response = requests.get(image_url)
+    image = Image.open(BytesIO(response.content))
+    return image
     
 model = load_model()
 
