@@ -62,23 +62,25 @@ elif page == "Guide":
     st.markdown("---")
     st.write("This page displays the names of the classes that the model can classify:")
 
-    st.write("- Glioma")
     glioma_image = load_image("https://drive.google.com/uc?export=view&id=1_dHlhzdvtZxzPKiby1w9N__R9uPrAXUP")
     st.image(glioma_image, caption="Glioma", use_column_width=True)
+    caption_style = "font-size: 16px; color: white; text-align: center;"
+    st.markdown("Glioma")
 
-    st.write("- Meningioma")
     meningioma_image = load_image("https://drive.google.com/uc?export=view&id=1gCTR9Oe4zuE3SDojoqYPMPwOupfSA9Lf")
     st.image(meningioma_image, caption="Meningioma", use_column_width=True)
+    caption_style = "font-size: 16px; color: white; text-align: center;"
+    st.markdown("Meningioma")
 
     no_tumor_image = load_image("https://drive.google.com/uc?export=view&id=1JqI8bUEW6P3PyYfGsudr_0oMxekgYLDy")
     st.image(no_tumor_image, use_column_width=True)
-    caption_style = "font-size: 16px; color: white;"
-    st.markdown(f"<p style='{caption_style}'>No Tumor</p>")
+    caption_style = "font-size: 16px; color: white; text-align: center;"
+    st.markdown("No Tumor")
 
-
-    st.write("- Pituitary")
     pituitary_image = load_image("https://drive.google.com/uc?export=view&id=1gLzYhPu_P-ZZybapSBEE_mzTymFCd7FP")
     st.image(pituitary_image, caption="Pituitary", use_column_width=True)
+    caption_style = "font-size: 16px; color: white; text-align: center;"
+    st.markdown("Pituitary")
     
 # About Page
 elif page == "About":
