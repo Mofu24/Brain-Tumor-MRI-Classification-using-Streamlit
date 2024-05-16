@@ -72,7 +72,7 @@ elif page == "Guide":
 
     st.write("- No Tumor")
     no_tumor_image = load_image("https://drive.google.com/uc?export=view&id=1JqI8bUEW6P3PyYfGsudr_0oMxekgYLDy")
-    st.image(no_tumor_image, caption="No Tumor", use_column_width=True)
+    st.image(no_tumor_image, caption="<span style='font-size:16px; color:white'>No Tumor</span>", use_column_width=True)
 
     st.write("- Pituitary")
     pituitary_image = load_image("https://drive.google.com/uc?export=view&id=1gLzYhPu_P-ZZybapSBEE_mzTymFCd7FP")
