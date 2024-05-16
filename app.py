@@ -70,12 +70,9 @@ elif page == "Guide":
     meningioma_image = load_image("https://drive.google.com/uc?export=view&id=1gCTR9Oe4zuE3SDojoqYPMPwOupfSA9Lf")
     st.image(meningioma_image, caption="Meningioma", use_column_width=True)
 
-    st.write("- No Tumor")
     no_tumor_image = load_image("https://drive.google.com/uc?export=view&id=1JqI8bUEW6P3PyYfGsudr_0oMxekgYLDy")
-    st.image(no_tumor_image, caption="No Tumor", use_column_width=True)
-
-    # Adding custom caption styling
-    caption_style = "font-size: 16px; color: lightgrey;"
+    st.image(no_tumor_image, use_column_width=True)
+    caption_style = "font-size: 16px; color: white;"
     st.markdown(f"<p style='{caption_style}'>No Tumor</p>")
 
 
