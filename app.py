@@ -47,7 +47,7 @@ if page == "Home":
 
     # File Uploader
     file = st.file_uploader("Choose a Brain MRI image", type=["jpg", "png"])
-    st.markdown("---")
+    
     # Function to make predictions
     def import_and_predict(image_data, model):
         size = (150, 150)  
@@ -57,7 +57,7 @@ if page == "Home":
         img_reshape = img[np.newaxis, ...]
         prediction = model.predict(img_reshape)
         return prediction
-    st.markdown("---")
+    
     # Display the results
     if file is not None:
         image = Image.open(file)
