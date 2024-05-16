@@ -69,7 +69,7 @@ elif page == "Guide":
     st.write("- Meningioma")
     st.image("https://drive.google.com/uc?export=view&id=1JqI8bUEW6P3PyYfGsudr_0oMxekgYLDy", caption="No Tumor", use_column_width=True)
     st.write("- No Tumor")
-    st.image("https://drive.google.com/uc?export=view&id=1gLzYhPu_P-ZZybapSBEE_mzTymFCd7FP", caption="Pituitary", use_column_width=True)
+    st.image("https://drive.google.com/uc?export=view&id=1klmMcv2ioiIy09M-AG4sXcKCOHNyBiMJ", caption="Pituitary", use_column_width=True)
     st.write("- Pituitary")
 
 # About Page
