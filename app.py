@@ -80,7 +80,7 @@ elif page == "Guide":
     pituitary_image = load_image("https://drive.google.com/uc?export=view&id=1gLzYhPu_P-ZZybapSBEE_mzTymFCd7FP")
     st.image(pituitary_image, caption="Pituitary", use_column_width=True)
     caption_style = "font-size: 16px; color: white; text-align: center;"
-    st.markdown("Pituitary")
+    st.markdown("<p style='{caption_style}'>Pituitary</p>")
     
 # About Page
 elif page == "About":
