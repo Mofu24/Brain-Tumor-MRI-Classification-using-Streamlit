@@ -14,7 +14,7 @@ model = load_model()
 
 # Navigation Bar
 st.sidebar.title("Navigation")
-page = st.sidebar.radio("Go to", ["Home", "Names", "About"])
+page = st.sidebar.radio("Go to", ["Home", "Instruction", "About"])
 
 # Home Page
 if page == "Home":
@@ -64,3 +64,10 @@ elif page == "About":
     st.markdown("---")
     st.write("This is a simple web application that classifies Brain MRI images into four categories: Glioma, Meningioma, No Tumor, and Pituitary Tumor.")
     st.write("It uses a deep learning model trained on MRI images to make predictions.")
+    st.write.header("Group 3 - CPE 019-CPE32S6")
+    st.write.markdown("Ejercito, Marlon Jason")
+    st.write.markdown("Flores, Mico Joshua")
+    st.write.markdown("Flores, Marc Oliver")
+    st.write.markdown("Gabiano, Chris Leonard")
+    st.write.markdown("Gomez, Joram")
+
