@@ -9,9 +9,6 @@ import numpy as np
 def load_model():
     model = tf.keras.models.load_model('fmodel.h5')
     return model
-
-def load_image(url):
-    return PIL.Image.open(requests.get(url, stream=True).raw)
     
 model = load_model()
 
